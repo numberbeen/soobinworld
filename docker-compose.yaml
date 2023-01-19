@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  fastify-was:
+    image: soobin-world:1.1
+
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: soobin
+      MONGO_INITDB_ROOT_PASSWORD: world
