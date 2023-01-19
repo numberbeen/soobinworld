@@ -6,7 +6,6 @@ on:
       - main
 env:
   AWS_REGION: ap-northeast-2
-  ECR_REPOSITORY: soobin-world
   
 jobs:
   deploy:
